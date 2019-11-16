@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
     $err = [];
 
     /**/
-    if(!preg_match("/^[a-zA-Z_]+$/",$_POST['login']))
+    if(!preg_match("/^[a-zA-Z0-9_]+$/",$_POST['login']))
     {
         $err[] = "Ваш логин должен состоять только из латиницы и цифр.";
         
