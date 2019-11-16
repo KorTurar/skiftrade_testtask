@@ -21,7 +21,7 @@
 	 	</div>
 	</header> 
 	<section>
-		<div class="requestsDiv">
+		<h1 class="requestsHeading">Ваши Запросы</h1>
 		<?php 
 			if(mysqli_num_rows($query) == 0)
     		{	
@@ -29,16 +29,17 @@
     		}
     		else
     		{	
-    			echo "<ul>"; 
+    			echo "<article>"; 
     			while ($row = mysqli_fetch_assoc($query)) 
     			{
-    			    echo "<li>".$row["request"]."</li>";
+    				echo "<h2 class='theme'>".$row["theme"]."</h2>";
+    			    echo "<p class='requestBody'>".$row["request"]."</p>";
     			}
-    			echo "</ul>";
+    			echo "</article>";
     		}
 
 		?>
-		</div>
+		
 	</section>
 </body>
 </html>
