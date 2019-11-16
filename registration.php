@@ -1,13 +1,13 @@
 <?php
-$link=mysqli_connect("localhost", "root", "", "regandauth");
+$link=mysqli_connect("localhost", "root", "", "skiftrade_testtask");
 
 if(isset($_POST['submit']))
 {
 
     $err = [];
 
-    
-    if(!preg_match("/^[a-zA-Z0-9]+$/",$_POST['login']))
+    /**/
+    if(!preg_match("/^[a-zA-Z_]+$/",$_POST['login']))
     {
         $err[] = "Ваш логин должен состоять только из латиницы и цифр.";
         
@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
     }
 
     
-    $query = mysqli_query($link, "SELECT user_id FROM users WHERE user_login='".mysqli_real_escape_string($link, $_POST['login'])."'");
+    $query = mysqli_query($link, "SELECT id FROM users WHERE username='".mysqli_real_escape_string($link, $_POST['login'])."'");
     if(mysqli_num_rows($query) > 0)
     {
         $err[] = "Пользователь с таким логином уже есть.";
@@ -30,14 +30,15 @@ if(isset($_POST['submit']))
    
     if(count($err) == 0)
     {
-
+       
         $login = $_POST['login'];
 
         
         $password = md5(md5(trim($_POST['password'])));
 
-        mysqli_query($link,"INSERT INTO users SET user_login='".$login."', user_password='".$password."'");
-        echo "<p style='text-align:center;'>Вы зарегистрированы</p>";
+        mysqli_query($link,"INSERT INTO users SET username='".$login."', password='".$password."', email='".$_POST['email']."'");
+        var_dump($query);
+        echo "<br><p style='text-align:center;'>Вы зарегистрированы</p>";
     }
     else
     {
