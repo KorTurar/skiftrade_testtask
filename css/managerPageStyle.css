@@ -15,7 +15,11 @@
 	margin: 5px 20px 5px 20px;
 }
 
-.id, .sendTime, .theme, .requestBody
+article
+{
+	margin: 20px 0 50px 0;
+}
+.id, .sendTime, .theme, .requestBody, .username, .email, .answerBtn, .closeFormBtn
 {
 	margin: 5px 20px 5px 40px;
 }
@@ -25,7 +29,12 @@
 	margin:5px 20px 5px 300px;;
 }
 
-.loginInput
+
+.requestAnswerDiv
+{
+	display: none;
+}
+.loginInput, .idInput
 {
 	display: none;
 }

@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
     }
 
     
-    $query = mysqli_query($link, "SELECT id FROM users WHERE username='".mysqli_real_escape_string($link, $_POST['login'])."'");
+    $query = mysqli_query($link, "SELECT id FROM users WHERE username='".$_POST['login']."'");
     if(mysqli_num_rows($query) > 0)
     {
         $err[] = "Пользователь с таким логином уже есть.";
