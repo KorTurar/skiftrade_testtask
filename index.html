@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script><!---->
+</head>
+<body>
+	<div class="regandauthWrapper">
+		<div class="auth"><p>Авторизация</p></div><div class="reg"><p>Регистрация</p></div>
+		<div id="auth">
+			<form class="authForm" method="post" action="auth.php" enctype="multipart/form-data">
+
+				
+				<input type="text" name="login" class="loginInput" placeholder="Ваш логин" required>
+				<input type="password" name="password" class="passwordInput" placeholder="Ваш пароль" required>
+				<input type="submit" name="submit" class="submit" value="Войти">
+
+
+			</form>
+		</div>
+		<div id="registration">
+			<form class="registrationForm" method="post" action="registration.php" enctype="multipart/form-data">
+
+				
+				<input type="text" name="login" class="loginInput" placeholder="Ваш логин" required>
+				<input type="password" name="password" class="passwordInput" placeholder="Ваш пароль" required>
+				
+				<input type="submit" name="submit" class="submit" value="Зарегистрироваться">
+
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>

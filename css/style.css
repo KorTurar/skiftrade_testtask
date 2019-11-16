@@ -1,0 +1,85 @@
+body
+{
+	background-color: rgb(100,100,255);
+}
+
+body p
+{
+	display: inline-block;
+
+}
+
+.regandauthWrapper
+{
+	margin: 100px auto auto auto;
+	width: 500px;
+	background-color: rgb(200,200,255);
+}
+
+.auth, .reg
+{
+	width: 250px;
+	float: left;
+	text-align: center;
+}
+
+.auth
+{
+	background-color: rgb(70,70,200);
+}
+
+.reg
+{
+	background-color: rgb(50,50,200);
+}
+
+.auth:hover, .reg:hover
+{
+	cursor: pointer;
+}
+
+.auth p, .reg p
+{
+	text-align: center;
+	font-family: Helvetica;
+	color: rgb(200,200,200);
+}
+
+#auth
+{
+	display: block;
+	text-align: center;
+}
+
+#registration
+{
+	display: none;
+	text-align: center;
+
+}
+
+.authForm
+{
+	text-align: center;
+}
+input
+{
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0 20px 0;
+	border: none;
+}
+
+input.loginInput
+{
+	border-bottom: 1px solid rgb(200,200,200);
+}
+
+input.submit:hover
+{
+	cursor: pointer;
+}
+
+
+
