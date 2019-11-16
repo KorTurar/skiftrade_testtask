@@ -1,0 +1,31 @@
+.userName
+{
+	background-color: rgba(50,50,255,1);
+}
+
+.userName p
+{
+	margin: 10px 0 10px 0;
+	padding: 0;
+}
+
+
+.requestsHeading, .contactHeading
+{
+	margin: 5px 20px 5px 20px;
+}
+
+.id, .spendTime, .theme, .requestBody
+{
+	margin: 5px 20px 5px 40px;
+}
+
+
+
+input, textarea
+{
+	display: block;
+	margin: 5px 20px 5px 40px;
+	width:500px;
+}
+

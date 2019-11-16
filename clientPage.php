@@ -7,12 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/clientPageStyle.css">
 </head>
 <body>
 	<header>
 		<div class="container-fluid">
 			<div class="row">
-				 <div class="bg-primary col-lg-12">
+				 <div class="userName col-lg-12">
 				 	<p>
 						<?php echo $_POST['login']?>
 					</p>
@@ -32,6 +33,7 @@
     			echo "<article>"; 
     			while ($row = mysqli_fetch_assoc($query)) 
     			{
+    				echo "<span class='id'>id: ".$row["id"]."</span><span class='spendTime'>Дата отправки: ".$row["sendtime"]."</span>";
     				echo "<h2 class='theme'>".$row["theme"]."</h2>";
     			    echo "<p class='requestBody'>".$row["request"]."</p>";
     			}
@@ -40,6 +42,19 @@
 
 		?>
 		
+	</section>
+	<section>
+		<h2 class="contactHeading">Обратная связь</h2>
+		<form class="requestSendForm" method="post" action="requestReceive.php" enctype="multipart/form-data">
+
+				
+				<input type="text" name="theme" class="themeInput" placeholder="Введите тему" required>
+				<textarea name="request" class="requestInput" placeholder="Ваш запрос" cols="45" rows="10" required></textarea>
+								
+				<input type="submit" name="submit" class="submit" value="Отправить">
+
+
+		</form>
 	</section>
 </body>
 </html>
