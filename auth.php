@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
             //setcookie("id", $data['id'], time()+60*60*24*30);
             //setcookie("authorized", 1, time()+60*60*24*30,null,null,null,true); 
 
-            $query = mysqli_query($link,"SELECT id, theme, request, sendtime FROM requestsandanswers WHERE username='".mysqli_real_escape_string($link,$_POST['login'])."'");
+            $query = mysqli_query($link,"SELECT id, theme, request, sendDateAndTime FROM requestsandanswers WHERE username='".mysqli_real_escape_string($link,$_POST['login'])."'");
             include "clientPage.php";       
         //echo "<p style='text-align:center;'>Вы авторизованы</p>";
         }

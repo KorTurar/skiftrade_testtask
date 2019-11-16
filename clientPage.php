@@ -15,7 +15,7 @@
 			<div class="row">
 				 <div class="userName col-lg-12">
 				 	<p>
-						<?php echo $_POST['login']?>
+						<?php echo $_POST['login'];?>
 					</p>
 				 </div>
 			</div>
@@ -33,7 +33,7 @@
     			echo "<article>"; 
     			while ($row = mysqli_fetch_assoc($query)) 
     			{
-    				echo "<span class='id'>id: ".$row["id"]."</span><span class='spendTime'>Дата отправки: ".$row["sendtime"]."</span>";
+    				echo "<span class='id'>id: ".$row["id"]."</span><span class='sendTime'>Дата и время отправки: ".$row["sendDateAndTime"]."</span>";
     				echo "<h2 class='theme'>".$row["theme"]."</h2>";
     			    echo "<p class='requestBody'>".$row["request"]."</p>";
     			}
@@ -45,9 +45,9 @@
 	</section>
 	<section>
 		<h2 class="contactHeading">Обратная связь</h2>
-		<form class="requestSendForm" method="post" action="requestReceive.php" enctype="multipart/form-data">
+		<form class="requestSendForm" method="post" action="requestReceiveAndAnswer.php" enctype="multipart/form-data">
 
-				
+				<input type="text" name="login" class="loginInput" value=<?php echo $_POST['login'];?> >
 				<input type="text" name="theme" class="themeInput" placeholder="Введите тему" required>
 				<textarea name="request" class="requestInput" placeholder="Ваш запрос" cols="45" rows="10" required></textarea>
 								
