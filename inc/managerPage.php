@@ -12,18 +12,18 @@
 </head>
 <body>
 	<header>
-		<div class="container-fluid">
-			<div class="row">
-				 <div class="userName col-lg-12">
-				 	<p>
-						<?php echo $_POST['login'];?>
-					</p>
-				 </div>
-			</div>
-	 	</div>
+		
+		<div class="userName">
+		 	<p>
+				<?php echo $_POST['login'];?>
+			</p>
+		</div>
+			
 	</header> 
-	<section>
-		<h1 class="requestsHeading">Все запросы</h1>
+	<section class="requestsSec">
+        <div class="requestsHeadingDiv">
+		  <h1 class="requestsHeading">Все запросы</h1>
+        </div>
 		<?php 
 			if(mysqli_num_rows($requestsQuery) == 0)
     		{	
@@ -37,7 +37,7 @@
     				$emailQuery = mysqli_query($link,"SELECT email FROM users WHERE username='".$row['username']."' LIMIT 1");
 					$emailRow = mysqli_fetch_assoc($emailQuery);
 					
-    				echo "<article>"; 
+    				echo "<article class='reqArt'>"; 
     				echo "<span class='id'>id: ".$row["id"]."</span><span class='username'>Отправил: ".$row['username']."</span><span class='email'>Почта: ".$emailRow['email']."</span><span class='sendTime'>Дата и время отправки: ".$row["sendDateAndTime"]."</span>";
     				echo "<h2 class='theme'>Тема: ".$row["theme"]."</h2>";
     			    echo "<p class='requestBody'>".$row["request"]."</p>";

@@ -1,30 +1,72 @@
+
+
+
+
+
 .userName
 {
-	background-color: rgba(50,50,255,1);
+	padding:  0 0 0 100px;
+	background-color: rgba(100,100,255,1);
+	box-shadow: 2px 3px 5px rgba(100,100,100,0.5);
 }
 
 .userName p
 {
-	margin: 10px 0 10px 0;
-	padding: 0;
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	font-family: Arial;
+}
+
+.requestsSec
+{
+	width: 80%;
+	margin:50px auto 50px auto;
+	box-shadow: 2px 2px 5px rgba(100,100,100,0.5);
+	background-color: rgba(245,245,245,1);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.requestsHeadingDiv
+{
+	padding: 10px;
+	background-color: rgba(200,200,200,1);
 }
 
 
-.requestsHeading, .contactHeading
+
+.requestsHeading
 {
 	margin: 5px 20px 5px 20px;
 }
 
-article
+.reqArt
 {
-	margin: 20px 0 50px 0;
+	margin:  10px;
+	overflow: hidden;
 }
+
+.reqArt:not(:last-child)
+{
+	border-bottom: 1px solid rgba(200,200,200,1);
+	padding-bottom: 20px;
+}
+
 .id, .sendTime, .theme, .requestBody, 
 .username, .email, .answerBtn, .closeFormBtn, 
-.shortenedRequest, .showReqBtn, .hideReqBtn
+.shortenedRequest, .hideReqBtn
 {
 	margin: 5px 20px 5px 40px;
 }
+
+.showReqBtn, .hideReqBtn, .answerBtn
+{
+	float: right;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 5px; 
+	outline: none;
+}
+
 
 .answerHeading, .answerBody
 {
@@ -59,6 +101,7 @@ input, textarea
 {
 	display: block;
 	margin: 5px 20px 5px 40px;
-	width:500px;
+	width:93%;
+	padding: 10px;
 }
 
