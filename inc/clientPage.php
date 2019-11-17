@@ -24,7 +24,7 @@
 	<section>
 		<h1 class="requestsHeading">Ваши запросы</h1>
 		<?php 
-			if(mysqli_num_rows($query) == 0)
+			if(mysqli_num_rows($requestsQuery) == 0)
     		{	
     			echo "<p>У вас нет запросов</p>";
     		}

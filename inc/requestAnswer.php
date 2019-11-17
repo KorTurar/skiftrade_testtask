@@ -1,5 +1,6 @@
 <?php
 	$link=mysqli_connect("localhost", "root", "", "skiftrade_testtask");
+	mysqli_query($link, "SET NAMES 'utf8'");
 
 	if(isset($_POST['submit']))
 	{
