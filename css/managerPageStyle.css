@@ -19,7 +19,9 @@ article
 {
 	margin: 20px 0 50px 0;
 }
-.id, .sendTime, .theme, .requestBody, .username, .email, .answerBtn, .closeFormBtn
+.id, .sendTime, .theme, .requestBody, 
+.username, .email, .answerBtn, .closeFormBtn, 
+.shortenedRequest, .showReqBtn, .hideReqBtn
 {
 	margin: 5px 20px 5px 40px;
 }
@@ -29,6 +31,20 @@ article
 	margin:5px 20px 5px 300px;;
 }
 
+.requestBody,.answerDiv, .hideReqBtn
+{
+	display: none;
+}
+
+.answeredStatusN
+{
+	color: rgba(255,0,0,1);
+}
+
+.answeredStatusY
+{
+	color: rgba(0,255,0,1);
+}
 
 .requestAnswerDiv
 {

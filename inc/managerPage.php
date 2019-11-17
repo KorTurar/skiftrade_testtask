@@ -41,16 +41,31 @@
     				echo "<span class='id'>id: ".$row["id"]."</span><span class='username'>Отправил: ".$row['username']."</span><span class='email'>Почта: ".$emailRow['email']."</span><span class='sendTime'>Дата и время отправки: ".$row["sendDateAndTime"]."</span>";
     				echo "<h2 class='theme'>Тема: ".$row["theme"]."</h2>";
     			    echo "<p class='requestBody'>".$row["request"]."</p>";
+
+    			    echo "<span class='shortenedRequest'>".substr($row["request"], 0, 20)."......"."</span>";
+    			    if ($row["answer"]!=null)
+    			    {	
+    			    	 echo "<span class='answeredStatusY'>Вы ответили</span>";
+    			    }
+    			    else
+    			    {
+    			    	echo "<span class='answeredStatusN'>Вы не ответили</span>";
+    			    }
+    			    echo "<div  class='answerDiv'>";
     			    if ($row["answer"]!=null)
     			    {
+    			    	
     			    	echo "<h2 class='answerHeading'>Ответ</h2>";
     			    	echo "<p class='answerBody'>".$row["answer"]."</p>";
+    			    	
     			    }
     			    else
     			    {
     			    	echo "<button class='answerBtn'>Ответить</button>";
     			    }
-    			    
+    			    echo "</div>";
+    			    echo "<button class='showReqBtn'>Просмотреть</button>";
+    			    echo "<button class='hideReqBtn'>Свернуть</button>";
     			    echo "</article>";
     			}
     			
@@ -65,7 +80,7 @@
 					<textarea name="answer" class="answerInput" placeholder="Ваш ответ" cols="45" rows="10" required></textarea>
 									
 					<input type="submit" name="submit" class="submit" value="Отправить">
-					<button class="closeFormBtn">Закрыть форму</button>
+					
 
 			</form>
 		</div>	
