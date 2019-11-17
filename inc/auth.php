@@ -1,7 +1,7 @@
 <?php
 // Соединямся с БД
 $link=mysqli_connect("localhost", "root", "", "skiftrade_testtask");
-
+mysqli_set_charset($link, "utf8");
 if(isset($_POST['submit']))
 {
     
