@@ -72,20 +72,20 @@
     		}
 
 		?>
-		<div class="requestAnswerDiv">
-			<form class="requestSendForm" method="post" action="requestAnswer.php" enctype="multipart/form-data">
-
-					<input type="text" name="managerName" class="loginInput" value=<?php echo $_POST['login'];?> >
-					<input type="text" name="id" class="idInput">
-					<textarea name="answer" class="answerInput" placeholder="Ваш ответ" cols="45" rows="10" required></textarea>
-									
-					<input type="submit" name="submit" class="submit" value="Отправить">
-					
-
-			</form>
-		</div>	
+			
 	</section>
-		
+		<div class="requestAnswerDiv">
+            <form class="requestSendForm" method="post" action="requestAnswer.php" enctype="multipart/form-data">
+
+                    <input type="text" name="login" class="loginInput" value=<?php echo $_POST['login'];?> >
+                    <input type="text" name="id" class="idInput">
+                    <textarea name="answer" class="answerInput" placeholder="Ваш ответ" cols="45" rows="10" required></textarea>
+                                    
+                    <input type="submit" name="submit" class="submit" value="Отправить">
+                    
+
+            </form>
+        </div>
 </body>
 </html>
 

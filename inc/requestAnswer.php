@@ -4,8 +4,7 @@
 
 	if(isset($_POST['submit']))
 	{
-    	var_dump($_POST);
-    $query = mysqli_query($link,"UPDATE requestsandanswers SET answer = '".mysqli_real_escape_string($link,$_POST['answer'])."', managerName = '".$_POST['managerName']."' WHERE id = ".$_POST['id']);
+    	$query = mysqli_query($link,"UPDATE requestsandanswers SET answer = '".mysqli_real_escape_string($link,$_POST['answer'])."', managerName = '".$_POST['login']."' WHERE id = ".$_POST['id']);
 
 
     
@@ -15,7 +14,7 @@
 	    }
 	    else
 	    {
-	    	print "Всё записалось";
+	    	include "managerPage.php";
 	    }	/**/
 	}
 ?>
