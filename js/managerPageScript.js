@@ -5,7 +5,7 @@ $(document).ready(function(){
 			$('.requestAnswerDiv').css('display', 'block');
 			$(this).css('display', 'none');
 			var parent=$(this).parent().parent();
-			var child=$(parent).children()[0];
+			var child=$($(parent).children()[0]).children()[0];
 			var text=$(child).text();
 			var id=text.split(" ")[1];
 			

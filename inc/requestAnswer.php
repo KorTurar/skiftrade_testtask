@@ -14,7 +14,7 @@
 	    }
 	    else
 	    {
-	    	include "managerPage.php";
+	    	print "Ответ записан";
 	    }	/**/
 	}
 ?>
