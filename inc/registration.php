@@ -37,8 +37,9 @@ if(isset($_POST['submit']))
         $password = md5(md5(trim($_POST['password'])));
 
         mysqli_query($link,"INSERT INTO users SET username='".$login."', password='".$password."', email='".$_POST['email']."'");
-        var_dump($query);
-        echo "<br><p style='text-align:center;'>Вы зарегистрированы</p>";
+        
+        $requestsQuery = mysqli_query($link,"SELECT * FROM requestsandanswers WHERE username='".$_POST['login']."'");
+        include "clientPage.php";
     }
     else
     {

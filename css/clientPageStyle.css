@@ -1,28 +1,83 @@
+*
+{
+	margin:0;
+	padding:0;
+
+}
+
+html
+{
+	font-family: Arial;
+}
+
+body
+{
+	background-color: rgba(250,250,250,1);
+}
 .userName
 {
-	background-color: rgba(50,50,255,1);
+	padding:  0 0 0 100px;
+	background-color: rgba(100,100,255,1);
+	box-shadow: 2px 3px 5px rgba(100,100,100,0.5);
 }
 
 .userName p
 {
-	margin: 10px 0 10px 0;
-	padding: 0;
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	font-family: Arial;
 }
 
+.requestsSec, .feedbackSec
+{
+	width: 80%;
+	margin:50px auto 50px auto;
+	box-shadow: 2px 2px 5px rgba(100,100,100,0.5);
+	background-color: rgba(245,245,245,1);
+	border-radius: 5px;
+	overflow: hidden;
+}
 
+.requestHeadingDiv, .contactHeadingDiv
+{
+	padding: 10px;
+	background-color: rgba(200,200,200,1);
+}
+
+.reqArt, .noPermissionDiv
+{
+	margin: 10px;
+	overflow: hidden;
+	
+}
+
+.reqArt:not(:last-child)
+{
+	border-bottom: 1px solid rgba(200,200,200,1);
+}
 .requestsHeading, .contactHeading
 {
 	margin: 5px 20px 5px 20px;
 }
 
-.id, .sendTime, .theme, .requestBody
+.id, .sendTime, .theme, .requestBody,  .noPermission
 {
-	margin: 5px 20px 5px 40px;
+	margin: 20px ;
 }
-
+.noRequestsPar
+{
+	margin: 20px 40px;
+}
 .answerHeading, .answerBody
 {
-	margin:5px 20px 5px 300px;;
+	margin:5px 20px 20px 300px;
+	overflow: hidden;
+}
+
+.formDiv
+{
+	margin:30px;
+	width: 100%;
 }
 
 .loginInput
@@ -33,7 +88,8 @@
 input, textarea
 {
 	display: block;
-	margin: 5px 20px 5px 40px;
-	width:500px;
+	/*margin: 5px 20px 5px 40px;*/
+	width:93%;
+	padding: 10px;
 }
 

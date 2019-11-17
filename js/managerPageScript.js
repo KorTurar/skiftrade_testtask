@@ -13,35 +13,6 @@ $(document).ready(function(){
 			$('.idInput').attr('value', id);
 		});
 
-	/*$('.closeFormBtn').click(function()
-		{
-			
-			$('.requestAnswerDiv').css('display', 'none');
-			var parent=$(this).parent().parent().parent();
-			var button=$(parent).children()[6];
-			$(button).css('display','block');
-		});*/
-
-	
-	/*
-	$('.requestBody').each(function (index){
-		$('.requestBody').css('display', 'none');
-		var shortenedText=$(this).text().substr(0,20)+".....";
-		var shortenedP=$('<span>', { class: "shortenedRequest", text: shortenedText});
-		$(this).after($(shortenedP));
-		var answeredStatusN=$('<span>', { class: "answeredStatus", text: "Вы не ответили"});
-		var answeredStatusY=$('<span>', { class: "answeredStatus", text: "Вы ответили"});
-		if ($($(this).next().next().next().children()[0]).hasClass("answerHeading"))
-		{
-			$(shortenedP).after(answeredStatusY);
-			//$(this).next().next().next().css('display', 'none');
-		}
-		else
-		{
-			$(shortenedP).after(answeredStatusN);
-		}
-		//$(this).parent().append($('<button>', { class: "showBtn", text: "Просмотреть"}));
-	});*/
 	$('.showReqBtn').click(function(){
 		$($(this).parent().children()[5]).css('display', 'block');
 		$($(this).parent().children()[8]).css('display', 'block');
