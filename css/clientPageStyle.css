@@ -74,6 +74,24 @@ body
 	overflow: hidden;
 }
 
+.attachedFilesDiv
+{
+	display: inline;
+}
+
+.attachedFileLabel
+{
+	vertical-align: middle;
+	margin:0 20px;
+}
+.attachedImg
+{
+	display: inline;
+	width:50px;
+	height:50px;
+	margin:0 20px;
+}
+
 .formDiv
 {
 	margin:30px;
@@ -94,4 +112,14 @@ input, textarea
 	padding: 10px;
 	font-family: Arial;
 }
+
+.fileSendLabel, input[type="file"]
+{
+	display: inline;
+	width:30%;
+	margin: 10px;
+	padding: 10px;
+	font-family: Arial;
+}
+
 

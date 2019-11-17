@@ -41,6 +41,13 @@
     			    	echo "<h2 class='answerHeading'>Ответ</h2>";
     			    	echo "<p class='answerBody'>".$row["answer"]."</p>";
     			    }
+    			    if ($row["fileName"]!=null)
+                    {
+                        echo "<div class='attachedFilesDiv'>";
+                        echo "<span class='attachedFileLabel'>Прикреплённый файл:</span>";
+                        echo "<img class='attachedImg' src='../uploads/".$row["fileName"]."'>";
+                        echo "</div>";
+                    }
     			    echo "</article>";
     			}
     			
@@ -58,14 +65,15 @@
     	$date= mysqli_fetch_assoc($dateQuery);
     	
     	$dateArray=explode(" ", $date['MAX(sendDateAndTime)']);
-    	
-    	if($dateArray[0]!=date("Y-m-d"))
+    	echo $dateArray[0]."  ".date("Y-m-d H:i:s");
+    	if($dateArray[0]!=date("Y-m-d "))
 		{
     	echo "<div class='formDiv'>";
 		echo "<form class='requestSendForm' method='post' action='requestReceive.php' enctype='multipart/form-data'>";
 		echo "<input type='text' name='login' class='loginInput' value=".$_POST['login'].">";
 		echo "<input type='text' name='theme' class='themeInput' placeholder='Введите тему' required>";
 		echo "<textarea name='request' class='requestInput' placeholder='Ваш запрос' cols='45' rows='10' required></textarea>";
+		echo "<label class='fileSendLabel' for='userfile' >Можете отправить файл:</label> <input name='userfile' type='file' accept='image/*' />";
 		echo "<input type='submit' name='submit' class='submit' value='Отправить'></form>";
 		echo "</div>";
 

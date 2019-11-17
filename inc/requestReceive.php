@@ -29,9 +29,14 @@
     	}*/
 
 
-
-
-        $query = mysqli_query($link,"INSERT INTO requestsandanswers SET username='".$_POST['login']."', theme='".mysqli_real_escape_string($link,$_POST['theme'])."', request='".mysqli_real_escape_string($link,$_POST['request'])."', sendDateAndTime=NOW()");/**/
+        if (isset($_FILES['userfile']))
+        {
+            
+            $uploaddir = '../uploads/';
+            $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+            move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
+            
+            $query = mysqli_query($link,"INSERT INTO requestsandanswers SET username='".$_POST['login']."', theme='".mysqli_real_escape_string($link,$_POST['theme'])."', request='".mysqli_real_escape_string($link,$_POST['request'])."', sendDateAndTime=NOW(), fileName='".$_FILES['userfile']['name']."'");
             if($query==false)
             {
                 print "Не удалось записать запрос";
@@ -40,6 +45,21 @@
             {
                 print "Всё записалось";
             }   
-   
+        }
+        else
+        {
+            $query = mysqli_query($link,"INSERT INTO requestsandanswers SET username='".$_POST['login']."', theme='".mysqli_real_escape_string($link,$_POST['theme'])."', request='".mysqli_real_escape_string($link,$_POST['request'])."', sendDateAndTime=NOW()");
+            if($query==false)
+            {
+                print "Не удалось записать запрос";
+            }
+            else
+            {
+                print "Всё записалось";
+            }   
+        }
+        /**/
+       
+
 	}
 ?>

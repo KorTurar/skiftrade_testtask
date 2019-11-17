@@ -38,11 +38,23 @@
 					$emailRow = mysqli_fetch_assoc($emailQuery);
 					
     				echo "<article class='reqArt'>"; 
-    				echo "<span class='id'>id: ".$row["id"]."</span><span class='username'>Отправил: ".$row['username']."</span><span class='email'>Почта: ".$emailRow['email']."</span><span class='sendTime'>Дата и время отправки: ".$row["sendDateAndTime"]."</span>";
+    				echo "<div class='description'><span class='id'>id: ".$row["id"]."</span><span class='username'>Отправил: ".$row['username']."</span><span class='email'>Почта: ".$emailRow['email']."</span><span class='sendTime'>Дата и время отправки: ".$row["sendDateAndTime"]."</span></div>";
     				echo "<h2 class='theme'>Тема: ".$row["theme"]."</h2>";
     			    echo "<p class='requestBody'>".$row["request"]."</p>";
 
     			    echo "<span class='shortenedRequest'>".substr($row["request"], 0, 20)."......"."</span>";
+                    if ($row["fileName"]!=null)
+                    {
+                        echo "<div class='attachedFilesDiv'>";
+                        echo "<span class='attachedFileLabel'>Прикреплённый файл:</span>";
+                        echo "<img class='attachedImg' src='../uploads/".$row["fileName"]."'>";
+                        echo "</div>";
+                    }
+                    else
+                    {
+                        echo "<div class='attachedFilesDiv'>";
+                        echo "</div>";
+                    }
     			    if ($row["answer"]!=null)
     			    {	
     			    	 echo "<span class='answeredStatusY'>Вы ответили</span>";

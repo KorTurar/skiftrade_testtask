@@ -54,11 +54,28 @@
 
 .id, .sendTime, .theme, .requestBody, 
 .username, .email, .answerBtn, .closeFormBtn, 
-.shortenedRequest, .hideReqBtn
+.shortenedRequest, .hideReqBtn, .attachedFilesDiv
 {
 	margin: 5px 20px 5px 40px;
 }
 
+.attachedFilesDiv
+{
+	display: inline;
+	display: none;/**/
+}
+
+.attachedFileLabel
+{
+	margin:0 20px;
+}
+.attachedImg
+{
+	display: inline;
+	width:50px;
+	height:50px;
+	margin:0 20px;
+}
 .showReqBtn, .hideReqBtn, .answerBtn
 {
 	float: right;
