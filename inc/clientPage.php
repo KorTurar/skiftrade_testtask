@@ -65,8 +65,10 @@
     	$date= mysqli_fetch_assoc($dateQuery);
     	
     	$dateArray=explode(" ", $date['MAX(sendDateAndTime)']);
-    	echo $dateArray[0]."  ".date("Y-m-d H:i:s");
-    	if($dateArray[0]!=date("Y-m-d "))
+    	date_default_timezone_set("Asia/Almaty");
+    	
+    	
+    	if($dateArray[0]!=date("Y-m-d"))
 		{
     	echo "<div class='formDiv'>";
 		echo "<form class='requestSendForm' method='post' action='requestReceive.php' enctype='multipart/form-data'>";
