@@ -25,7 +25,7 @@
 	<section>
 		<h1 class="requestsHeading">Все запросы</h1>
 		<?php 
-			if(mysqli_num_rows($query) == 0)
+			if(mysqli_num_rows($requestsQuery) == 0)
     		{	
     			echo "<p>Запросов нет</p>";
     		}
@@ -46,7 +46,11 @@
     			    	echo "<h2 class='answerHeading'>Ответ</h2>";
     			    	echo "<p class='answerBody'>".$row["answer"]."</p>";
     			    }
-    			    echo "<button class='answerBtn'>Ответить</button>";
+    			    else
+    			    {
+    			    	echo "<button class='answerBtn'>Ответить</button>";
+    			    }
+    			    
     			    echo "</article>";
     			}
     			
